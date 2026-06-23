@@ -14,7 +14,7 @@ export const APINode = ({ id, data }) => {
 
   return (
     <BaseNode id={id} label="API Node" handles={handles} icon={Globe}>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <label className="flex flex-col text-sm font-medium text-gray-700">
           Method:
           <select 
