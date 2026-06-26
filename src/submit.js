@@ -13,14 +13,8 @@ export const SubmitButton = () => {
 
   const handleSubmit = async () => {
     try {
-      // Show loading toast
-      const loadingToast = toast.loading("Analyzing pipeline...");
 
-      // Formatting as FormData as main.py currently expects Form(...)
-      // Or we can update main.py to expect JSON. Let's send JSON and update main.py to expect JSON, it's cleaner.
-      // Wait, the prompt says main.py has `pipeline: str = Form(...)`. If we must use Form, let's send FormData.
-      // But the prompt says "Send: { nodes, edges }", "await axios.post('http://localhost:8000/pipelines/parse', { nodes, edges })".
-      // Let's send JSON and update backend to accept JSON.
+      const loadingToast = toast.loading("Analyzing pipeline...");
 
       const response = await axios.post(
         "http://localhost:8000/pipelines/parse",
